@@ -8111,15 +8111,44 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', function(e) {
         if (!overlayContent.contains(e.target)) overlay.classList.add('overlay--hidden');
     });
-    // Симуляция отправки формы
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Эмуляция процесса отправки (например, с задержкой)
-        setTimeout(()=>{
-            overlay.classList.add('overlay--hidden');
-            form.reset(); // Очистка формы после отправки
-        }, 1000);
+// Симуляция отправки формы
+// form.addEventListener('submit', function(e){
+//   e.preventDefault();
+//   // Эмуляция процесса отправки (например, с задержкой)
+//   setTimeout(() => {
+//     overlay.classList.add('overlay--hidden');
+//     form.reset(); // Очистка формы после отправки
+//   }, 1000);
+// });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.querySelector('.byuing-catalog__overlay');
+    const overlayContent = document.querySelector('.byuing-catalog__overlay-content');
+    const overlayBtn = document.querySelectorAll('.js-byuing__btn-open');
+    const overlayBtnClose = document.querySelector('.js-byuing__btn-close');
+    const form = overlay.querySelector('.form');
+    overlayBtn.forEach((btn)=>{
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            overlay.classList.toggle('byuing-catalog__overlay--hidden');
+        });
     });
+    overlayBtnClose.addEventListener('click', function() {
+        overlay.classList.add('byuing-catalog__overlay--hidden');
+    });
+    // Закрытие при клике вне попапа
+    overlay.addEventListener('click', function(e) {
+        if (!overlayContent.contains(e.target)) overlay.classList.add('byuing-catalog__overlay--hidden');
+    });
+// // Симуляция отправки формы
+// form.addEventListener('submit', function(e){
+//   e.preventDefault();
+//   // Эмуляция процесса отправки (например, с задержкой)
+//   setTimeout(() => {
+//     overlay.classList.add('overlay--hidden');
+//     form.reset(); // Очистка формы после отправки
+//   }, 1000);
+// });
 });
 
 
@@ -8152,6 +8181,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
             item.classList.add("js-acc--active");
         });
     });
+});
+
+
+
+
+
+const $a17b4837d418b1fc$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b770e84)('.byuing-catalog__swiper', {
+    modules: [
+        (0, $3ede398f6665eb67$export$2e2bcd8739ae039),
+        (0, $48396d89743015b3$export$2e2bcd8739ae039),
+        (0, $aca53ddfb08084e6$export$2e2bcd8739ae039)
+    ],
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    speed: 700,
+    pagination: {
+        el: '.byuing-catalog__swiper-pagination',
+        clickable: true
+    },
+    slidesPerView: 1,
+    loop: true
 });
 
 

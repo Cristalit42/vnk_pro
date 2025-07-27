@@ -3040,37 +3040,20 @@ a {
 }
 
 .byuing-catalog__item {
-  background: #f9f9f9;
   border-radius: 15px;
-  gap: 10px;
+  gap: 25px;
   width: 100%;
   padding: 12px;
   display: flex;
-}
-
-@media (width <= 800px) {
-  .byuing-catalog__item {
-    background: #fdfdfd;
-    gap: 25px;
-    padding: 20px 15px;
-    overflow-x: auto;
-    box-shadow: 0 4px 8px #c2c2c21a, 0 14px 14px #c2c2c217, 0 33px 20px #c2c2c20d, 0 58px 23px #c2c2c203, 0 91px 25px #c2c2c200;
-  }
+  overflow-x: auto;
 }
 
 .byuing-catalog__item-col {
-  background: #fff;
+  background: none;
   border-radius: 15px;
-  width: 100%;
-  padding: 28px 30px;
-}
-
-@media (width <= 800px) {
-  .byuing-catalog__item-col {
-    background: none;
-    min-width: 215px;
-    padding: 0;
-  }
+  width: 215px;
+  min-width: 215px;
+  padding: 0;
 }
 
 .byuing-catalog__col-title {
@@ -3081,6 +3064,7 @@ a {
 
 .byuing-catalog__col-text {
   border-top: 1px solid #e0e0e0;
+  margin-bottom: 15px;
   padding-top: 20px;
   font-size: 20px;
   font-weight: 400;
@@ -3678,6 +3662,292 @@ a {
   }
 }
 
+.byuing-catalog .section-title {
+  margin-bottom: 10px;
+}
+
+.byuing-catalog__text {
+  color: #676767;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 162%;
+}
+
+@media (width <= 600px) {
+  .byuing-catalog__text {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+}
+
+.byuing-catalog__content {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  display: grid;
+}
+
+@media (width <= 1300px) {
+  .byuing-catalog__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 900px) {
+  .byuing-catalog__content {
+    display: block;
+  }
+}
+
+.byuing-catalog__content-item {
+  background: #fbfbfb;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all .3s;
+}
+
+.byuing-catalog__content-item:hover {
+  box-shadow: 0 11px 25px #dedede4a, 0 45px 45px #dedede42, 0 102px 61px #dedede26, 0 181px 73px #dedede0a, 0 284px 79px #dedede03;
+}
+
+@media (width <= 900px) {
+  .byuing-catalog__content-item {
+    margin-bottom: 20px;
+  }
+
+  .byuing-catalog__content-item:last-child {
+    margin: 0;
+  }
+}
+
+.byuing-catalog__img-wrapper {
+  max-width: 380px;
+  margin: 0 auto 15px;
+}
+
+.byuing-catalog__img-wrapper img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+
+@media (width <= 900px) {
+  .byuing-catalog__img-wrapper {
+    max-width: none;
+  }
+}
+
+.byuing-catalog__swiper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.byuing-catalog__swiper-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  width: 100% !important;
+}
+
+.byuing-catalog__swiper-slide {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.byuing-catalog__swiper-slide img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.byuing-catalog__swiper-pagination {
+  z-index: 10;
+  justify-content: center;
+  gap: 10px;
+  display: flex;
+  position: absolute;
+}
+
+.byuing-catalog__swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: #dfdfdf;
+  width: 10px;
+  height: 10px;
+  margin: 0 !important;
+}
+
+.byuing-catalog__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #fc0;
+  position: relative;
+}
+
+.byuing-catalog__swiper-pagination .swiper-pagination-bullet-active:before {
+  content: "";
+  border: 1px solid #fc0;
+  border-radius: 100%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}
+
+.byuing-catalog__item-title {
+  margin-bottom: 4px;
+  padding: 0 10px;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.byuing-catalog__item-text {
+  letter-spacing: .02em;
+  color: #9c9c9c;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.byuing-catalog__item-list {
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 25px;
+  padding: 0 10px;
+  display: flex;
+}
+
+.byuing-catalog__item-list li {
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.byuing-catalog__item-list div {
+  letter-spacing: .02em;
+  color: #9c9c9c;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+}
+
+.byuing-catalog__item-list span {
+  letter-spacing: .02em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.byuing-catalog__item-price {
+  margin-bottom: 25px;
+  padding: 0 10px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+@media (width <= 600px) {
+  .byuing-catalog__item-price {
+    font-size: 18px;
+  }
+}
+
+.byuing-catalog__item-btns {
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  display: flex;
+}
+
+.byuing-catalog__item-btn {
+  width: 100%;
+}
+
+.byuing-catalog__item-btn div {
+  max-height: 16px !important;
+}
+
+.byuing-catalog__item-btn:last-child {
+  max-width: 155px;
+}
+
+@media (width <= 600px) {
+  .byuing-catalog__item-btn {
+    padding: 20px !important;
+  }
+}
+
+.byuing-catalog__overlay {
+  z-index: 50;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff58;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+  display: flex;
+  position: fixed;
+}
+
+.byuing-catalog__overlay--hidden {
+  backdrop-filter: none;
+  visibility: hidden;
+  background: none;
+}
+
+.byuing-catalog__overlay--hidden .byuing-catalog__overlay-content {
+  position: absolute;
+  bottom: -100%;
+}
+
+.byuing-catalog__overlay-content {
+  background: #fdfdfd;
+  border-radius: 15px;
+  width: 100%;
+  max-height: max-content;
+  transition: all .3s;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  box-shadow: 0 4px 8px #c2c2c21a, 0 14px 14px #c2c2c217, 0 33px 20px #c2c2c20d, 0 58px 23px #c2c2c203, 0 91px 25px #c2c2c200;
+  padding: 35px !important;
+}
+
+@media (width <= 600px) {
+  .byuing-catalog__overlay-content {
+    padding: 35px 15px 15px !important;
+  }
+}
+
+.byuing-catalog__overlay-head {
+  border-bottom: 1px solid #e1e1e1;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  font-size: 25px;
+  font-weight: 500;
+  display: flex;
+}
+
+@media (width <= 600px) {
+  .byuing-catalog__overlay-head {
+    color: #272530;
+    border: none;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
 html, body {
   color: #000;
   font-family: Yandex-Sans-Text, sans-serif;
@@ -3796,6 +4066,19 @@ main {
 
 .btn--black-white:hover span {
   color: #fc0;
+}
+
+.btn--gray {
+  color: #000;
+  background: #f2f2f2;
+}
+
+.btn--gray:hover {
+  background-color: #fc0;
+}
+
+.btn--gray:hover span {
+  color: #fff;
 }
 
 .btn--yellow {
